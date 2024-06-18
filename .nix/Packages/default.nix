@@ -12,5 +12,8 @@
     [
       ./Browser
       ./Editor
+      ./Launcher
+      ./StatusBar
+      ./Terminal
     ];
 }
