@@ -1,0 +1,10 @@
+2024-06-17 23:24:20.339 [info] Extension host with pid 5926 started
+2024-06-17 23:24:20.339 [info] Skipping acquiring lock for /home/ixiri/.config/VSCodium/User/workspaceStorage/7ef165358b3514485195d29745b21e8f.
+2024-06-17 23:24:20.460 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*'
+2024-06-17 23:24:20.490 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2024-06-17 23:24:20.599 [info] Eager extensions activated
+2024-06-17 23:24:20.613 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2024-06-17 23:24:20.620 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2024-06-17 23:24:27.607 [info] ExtensionService#_doActivateExtension vscode.git, startup: false, activationEvent: 'api', root cause: vscode.github
+2024-06-17 23:24:33.075 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2024-06-17 23:26:58.833 [info] ExtensionService#_doActivateExtension jnoortheen.nix-ide, startup: false, activationEvent: 'onLanguage:nix'
