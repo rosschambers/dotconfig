@@ -1,0 +1,25 @@
+{
+  "prefs": {
+    "DismissedWarpAIWarmWelcome": "true",
+    "ChangelogVersions": "{\"v0.2024.06.04.08.02.stable_02\":true}",
+    "ReceivedReferralTheme": "\"Inactive\"",
+    "FontName": "\"Hack\"",
+    "AIRequestLimitInfo": "{\"limit\":40,\"num_requests_used_since_refresh\":1,\"next_refresh_time\":\"2024-07-18T20:11:36.502890Z\"}",
+    "HasDismissedWarpDriveWelcome": "true",
+    "SavedPrompt": "{\"CustomChipSelection\":{\"chips\":[{\"chip\":\"Username\",\"config\":{}},{\"chip\":\"WorkingDirectory\",\"config\":{}},{\"chip\":\"ShellGitBranch\",\"config\":{}},{\"chip\":\"GitDirtyFiles\",\"config\":{}}],\"same_line_prompt_enabled\":false,\"separator\":\"None\"}}",
+    "Spacing": "\"Compact\"",
+    "CompletionsOpenWhileTyping": "true",
+    "Theme": "\"Dracula\"",
+    "HasAutoOpenedWelcomeFolder": "true",
+    "HonorPS1": "false",
+    "WorkflowsBoxOpen": "true",
+    "ExperimentId": "ff748163-6df1-4e70-8980-61ffeb9f392e",
+    "AIAssistantRequestLimitInfo": "{\"limit\":40,\"num_requests_used_since_refresh\":0,\"next_refresh_time\":\"2024-07-18T20:11:36.502890Z\"}",
+    "WelcomeTipsFeaturesUsed": "[{\"Hint\":\"CreateBlock\"},{\"Action\":\"WarpAI\"},{\"Hint\":\"BlockSelect\"}]",
+    "NotebookFontSize": "14.0",
+    "TelemetryEnabled": "false",
+    "AutosuggestionAcceptedCount": "2",
+    "FontSize": "16.0",
+    "CrashReportingEnabled": "false"
+  }
+}

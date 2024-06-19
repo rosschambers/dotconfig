@@ -1,2 +1,9 @@
-.config/VSCodium/
+.bash_history
+
+
 .cache/
+.local/
+.mozilla/
+.ssh/
+Downloads/
+tmp

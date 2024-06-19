@@ -1,4 +1,0 @@
-2024-06-17 23:24:03.285 [info] Initial editor state {"filesToOpenOrCreate":[{"fileUri":{"$mid":1,"path":"/home/ixiri/.nix/packages.nix","scheme":"file"},"type":1,"exists":true,"options":{}}],"filesToDiff":[],"filesToMerge":[]}
-2024-06-17 23:24:04.732 [info] Started local extension host with pid 5716.
-2024-06-17 23:24:05.158 [info] Started initializing default profile extensions in extensions installation folder. file:///home/ixiri/.vscode-oss/extensions
-2024-06-17 23:24:06.437 [info] Completed initializing default profile extensions in extensions installation folder. file:///home/ixiri/.vscode-oss/extensions
