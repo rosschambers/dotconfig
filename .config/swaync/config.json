@@ -58,11 +58,11 @@
       "text": "Controll Center"
     },
     "mpris": {
-      "image-size": 96,
+      "image-size": 64,
       "image-radius": 12
     },
     "backlight": {
-      "label": "󰳲",
+      "label": "",
       "device": "intel_backlight",
       "min": 10
     },
@@ -90,7 +90,7 @@
       },
       "menu#powermode":{
         "label": "",
-        "position": "left",
+        "position": "right",
         "actions": [
           {
             "label": "󰾆",

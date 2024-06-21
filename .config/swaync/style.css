@@ -1,3 +1,5 @@
+ @import url("../colors.css");
+ 
  @define-color noti-border-color rgba(255, 255, 255, 0.15);
  @define-color noti-bg #2E3440;
  @define-color noti-bg-alt #383E4A;
@@ -160,7 +162,8 @@
  }
  
  .control-center {
-   background-color: @noti-bg-alt;
+   font-family: FiraCode;
+   background-color: @background-color;
  }
  
  .control-center-list {
@@ -180,156 +183,130 @@
  
  /* Title widget */
  .widget-title {
-   margin: 8px;
-   font-size: 1.5rem;
+   margin: 0px 10px;
+   padding: 0px;
+   font-size: 20px;
  }
+
  
  .widget-title>button {
    font-size: initial;
-   color: white;
+   color: @foreground;
    text-shadow: none;
-   background: @noti-bg;
-   border: 1px solid @noti-border-color;
+   background: transparent;
+   border: 1px solid @foreground;
    box-shadow: none;
-   border-radius: 12px;
+   border-radius: 15px;
  }
  
  .widget-title>button:hover {
-   background: @noti-bg-hover;
- }
- 
- /* DND widget */
- .widget-dnd {
-   margin: 8px;
-   font-size: 1.1rem;
- }
- 
- .widget-dnd>switch {
-   font-size: initial;
-   border-radius: 12px;
-   background: @noti-bg;
-   border: 1px solid @noti-border-color;
-   box-shadow: none;
- }
- 
- .widget-dnd>switch:checked {
-   background: @bg-selected;
- }
- 
- .widget-dnd>switch slider {
-   background: @noti-bg-hover;
-   border-radius: 12px;
- }
- 
- /* Label widget */
- .widget-label {
-   margin: 8px;
- }
- 
- .widget-label>label {
-   font-size: 1.1rem;
+  background: linear-gradient(-45deg, @item-background-hover 70%, transparent 90%);
  }
  
  /* Mpris widget */
  .widget-mpris {
    /* The parent to all players */
  }
- 
+
  .widget-mpris-player {
-   padding: 8px;
-   margin: 8px;
+  box-shadow: none;
+  margin: 0 10px;
+  padding: 10px;
  }
- 
+
  .widget-mpris-title {
-   font-weight: bold;
-   font-size: 1.25rem;
- }
- 
- .widget-mpris-subtitle {
-   font-size: 1.1rem;
+    font-weight: bold;
+    font-size: 12px;
+  }
+  .widget-mpris-subtitle {
+    font-size: 10px;
+  }
+
+ .widget-mpris-player > box > button:hover {
+  background: linear-gradient(-45deg, @item-background-hover 70%, transparent 90%);
  }
  
  /* Volume and Brightness Widget*/
  
- .widget-volume {
-   background-color: @noti-bg;
-   padding: 4px 8px 8px 8px;
-   margin: 0px 8px 8px 8px;
-   border-bottom-left-radius: 12px;
-   border-bottom-right-radius: 12px;
- }
+.widget-volume {
+   background-color: transparent;
+   padding: 0px;
+   margin: 0px 10px 0px 20px;
+   font-size: 20px;
+}
+.widget-volume > box > label{
+  margin: 0px 10px 0px 0px;
+}
+.widget-volume > box > scale trough highlight{
+  background: @background-color-alt;
+  min-height: 5px;
+  border: none;
+}
+.widget-volume > box > scale trough{
+  background: @foreground;
+  border: none;
+}
+
+.widget-backlight {
+  background-color: transparent;
+  padding: 0px;
+  margin: 0px 10px 0px 20px;
+  font-size: 20px;
+}
+.widget-backlight > label{
+  margin: 0px 10px 0px 0px;
+}
+.widget-backlight > scale trough highlight {
+  background: @background-color-alt;
+  min-height: 5px;
+  border: none;
+}
+.widget-backlight > scale trough{
+  background: @foreground;
+  border: none;
+}
+
+.widget-menubar > box > .menu-button-bar > button {
+  border: none;
+  background: transparent;
+  box-shadow:none;
+  margin: 10px 10px 0px 0px;
+  text-shadow: none;
+}
+.widget-menubar > box > .menu-button-bar > button:hover {
+  background: linear-gradient(-45deg, @item-background-hover 70%, transparent 90%);
+}
+.widget-menubar > box > .menu-button-bar > button:active {
+  border: none;
+}
+
+.powermode {
+  margin: 10px
+}
  
- .widget-backlight {
-   background-color: @noti-bg;
-   padding: 8px 8px 4px 8px;
-   margin: 8px 8px 0px 8px;
-   border-top-left-radius: 12px;
-   border-top-right-radius: 12px;
- }
+.powermode>button {
+  margin-bottom: 10px;
+  background: transparent;
+  text-shadow: none;
+  box-shadow: none;
+}
+
+.powermode>button:hover{
+  background: linear-gradient(-45deg, @item-background-hover 90%, transparent 100%);
+}
+
+.settings {
+  margin: 10px
+}
  
- .KB {
-   padding: 4px 8px 4px 8px;
-   margin: 0px 8px 0px 8px;
-   border-radius: 0;
- }
- 
- .power-buttons{
-   background-color: @noti-bg;
-   padding: 8px;
-   margin: 8px;
-   border-radius: 12px;
- }
- 
- 
- .power-buttons>button {
-   background: transparent;
-   border: none;
- }
- 
- .power-buttons>button:hover {
-   background: @noti-bg-hover;
- }
- 
- .widget-menubar>box>.menu-button-bar>button{
-   border: none;
-   background: transparent;
- }
- 
- .topbar-buttons>button{
-   border: none;
-   background: transparent;
- }
- 
- .widget-buttons-grid{
-   padding: 8px;
-   margin: 8px;
-   border-radius: 12px;
-   background-color: @noti-bg;
- }
- 
- .widget-buttons-grid>flowbox>flowboxchild>button{
-   background: @noti-bg;
-   border-radius: 12px;
- }
- 
- .widget-buttons-grid>flowbox>flowboxchild>button:hover {
-   background: @noti-bg-hover;
- }
- 
- .powermode-buttons{
-   background-color: @noti-bg;
-   padding: 8px;
-   margin: 8px;
-   border-radius: 12px;
- }
- 
- .powermode-buttons>button {
-   background: transparent;
-   border: none;
- }
- 
- .powermode-buttons>button:hover {
-   background: @noti-bg-hover;
- }
- 
+.settings>button {
+  margin-bottom: 10px;
+  background: transparent;
+  text-shadow: none;
+  box-shadow: none;
+}
+
+.settings>button:hover{
+  background: linear-gradient(-45deg, @item-background-hover 90%, transparent 100%);
+}
  

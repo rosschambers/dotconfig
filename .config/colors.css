@@ -1,0 +1,9 @@
+@define-color background-color rgba(30, 1, 60, 1);
+@define-color background-color-alt #A6D49F;
+@define-color module-background-two rgba(255, 59, 0, .8);
+@define-color module-background-three rgba(255, 255, 0, .5);
+@define-color item-background-hover rgba(255, 255, 255, .3);
+@define-color foreground rgba(255, 255, 255, 1);
+
+@define-color warn rgba(204, 135, 41, 1);
+@define-color error rgba(178, 3, 3, 1);

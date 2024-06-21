@@ -1,18 +1,10 @@
-@define-color module-background-one rgba(30, 1, 60, 1);
-@define-color module-background-two rgba(255, 59, 0, .8);
-@define-color module-background-three rgba(255, 255, 0, .5);
-@define-color hover-background rgb(20, 100, 0);
-@define-color item-background-hover rgba(255, 255, 255, .3);
-@define-color tooltip-background rgba(30, 1, 60, .8);
-@define-color foreground rgba(255, 255, 255, 1);
 
-@define-color warn rgba(204, 135, 41, 1);
-@define-color error rgba(178, 3, 3, 1);
+@import url("../colors.css");
 
 * {
     border: none;
     border-radius: 0px;
-    font-family: JetBrainsMono Nerd Font, Roboto, Helvetica, Arial, sans-serif;
+    font-family: FiraCode, JetBrainsMono Nerd Font, Roboto, Helvetica, Arial, sans-serif;
     min-height: 0;
     color: @foreground;
 }
@@ -29,18 +21,18 @@ window#waybar {
     font-size: 20px;
     border-radius: 15px;
     padding: 0px 15px;
-    background: @module-background-one;
+    background: @background-color;
 }
 
 .modules-right {
     font-size: 20px;
     border-radius: 15px 0px 0px 15px;
     padding: 0px 10px;
-    background: @module-background-one;
+    background: @background-color;
 }
 
 tooltip {
-    background: linear-gradient(180deg, @module-background-one 50%, transparent 90%);
+    background: linear-gradient(180deg, @background-color 50%, transparent 90%);
     border-radius: 12px;
     font-size: 12px;
 }
