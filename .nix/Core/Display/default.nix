@@ -12,4 +12,8 @@
       pkgs.xdg-desktop-portal-hyprland
     ];
   };
+
+  environment.systemPackages =  with pkgs; [
+    brightnessctl
+  ];
 }

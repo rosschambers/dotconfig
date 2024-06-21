@@ -1,0 +1,24 @@
+// https://github.com/Alexays/Waybar/blob/master/man/waybar-hyprland-workspaces.5.scd
+[
+    {
+        "reload_style_on_change": true,
+        "height": 30,
+        "layer": "top",
+        "position": "top",
+        "include": [
+            "~/.config/waybar/default-modules.jsonc"
+        ],
+        "modules-left":[
+            "cava"
+        ],
+        "modules-center":[
+            "wlr/taskbar",
+            "custom/launcher",
+            "tray"
+        ],
+        "modules-right":[
+            "group/hardware",
+            "custom/power"
+        ]
+    }
+]

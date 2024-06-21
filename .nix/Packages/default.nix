@@ -6,6 +6,8 @@
 {
   environment.systemPackages =  with pkgs; [
     git
+    iniparser
+    fftw
   ];
 
     imports =
@@ -13,6 +15,7 @@
       ./Browser
       ./Editor
       ./Launcher
+      ./Notifications
       ./StatusBar
       ./Terminal
     ];

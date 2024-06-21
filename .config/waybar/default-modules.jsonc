@@ -1,0 +1,173 @@
+{
+    "cava": 
+    {
+        "framerate": 30,
+        "autosens": 1,
+        "bars": 16,
+        "lower_cutoff_freq": 50,
+        "higher_cutoff_freq": 10000,
+        "method": "pipewire",
+        "source": "auto",
+        "stereo": true,
+        "reverse": false,
+        "bar_delimiter": 0,
+        "monstercat": false,
+        "waves": false,
+        "noise_reduction": 0.77,
+        "input_delay": 1,
+        "format-icons" : ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█" ],
+        "on-click": "playerctl play-pause",
+        "on-click-right": "pavucontrol"
+    },
+    "mpris":
+    {
+        "format": "{title}",
+        "title-len": 20
+    },
+    "wlr/taskbar":
+    {
+        "format": "{icon}",
+        "icon-size": 20,
+        "icon-theme": "Numix-Circle",
+        "tooltip-format": "{title}",
+        "on-click": "activate",
+        "on-click-middle": "close"
+    },
+    "tray":
+    {
+        "icon-size": 24,
+        "spacing": 2
+    },
+    "privacy": {
+        "icon-spacing": 10,
+        "icon-size": 20,
+        "transition-duration": 250,
+        "modules": [
+            {
+                "type": "screenshare",
+                "tooltip": true,
+                "tooltip-icon-size": 12
+            },
+            {
+                "type": "audio-out",
+                "tooltip": true,
+                "tooltip-icon-size": 12
+            },
+            {
+                "type": "audio-in",
+                "tooltip": true,
+                "tooltip-icon-size": 12
+            }
+        ]
+    },
+    "hyprland/workspaces": 
+    {
+        "disable-scroll": true,
+        "all-outputs": false,
+        "format": "{name} {icon}",
+        "format-icons": {
+        "1": "",
+        "2": "",
+        "3": "",
+        "4": "",
+        "5": "",
+        "active": "",
+        "default": ""
+        },
+        "persistent-workspaces": {
+            "*": [ 1, 2, 3, 4, 5 ]
+        }
+    },
+    "custom/launcher":
+    {
+        "format": "󰀻",
+        "tooltip-format": "",
+        "on-click": "wofi -show drun",
+        "on-click-right": "killall wofi"
+    },
+    "custom/power":{
+        "format": "",
+        "tooltip-format": "",
+        "on-click": "~/.scripts/wofi-power.sh",
+        "on-click-right": "killall wofi"
+    },
+    "network":
+    {
+        "format-wifi": "",
+        "format-ethernet": "",
+        "tooltip-format": "{essid} {signalStrength}% {ipaddr}",
+        "format-disconnected": "⚠",
+        "on-click-right": "bash ~/.config/rofi/wifi_menu/rofi_wifi_menu"
+    },
+    "battery":
+    {
+        "states": {
+            "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon}",
+        "format-charging": "󰂄",
+        "format-charging.good": "",
+        "format-icons": ["󰂃", "󱊡", "󱊢", "󱊣"],
+        "on-click": "swaync-client -t -sw"
+    },
+    "backlight": 
+    {
+        "device": "intel_backlight",
+        "format": "{percent}% {icon}",
+        "format-icons": ["", ""]
+    },
+    "cpu":
+    {
+        "format": "{icon}",
+        "rotate": 270,
+        "format-icons": ["", "", "", "", "", "", "", ""],
+    },
+    "memory":
+    {
+        "format": "󰒇",
+        "tooltip-format": "{percentage}% {avail:0.1f}GiB"
+    },
+    "group/hardware":
+    {
+        "orientation": "inherit",
+        "modules": [
+            "group/settings",
+            "memory",
+            "cpu"
+        ],
+        "drawer": {
+            "transition-left-to-right": false
+        },
+        "on-click": "swaync-client -t -sw"
+    },
+    "group/settings":
+    {
+        "orientation": "inherit",
+        "modules": [
+            "battery",
+            "privacy",
+            "custom/notification"
+        ]
+    },
+    "custom/notification": {
+        "tooltip": true,
+        "format": "{icon}",
+        "format-icons": {
+          "notification": "<span foreground='red'><sup></sup></span>",
+          "none": "",
+          "dnd-notification": "<span foreground='red'><sup></sup></span>",
+          "dnd-none": "",
+          "inhibited-notification": "<span foreground='red'><sup></sup></span>",
+          "inhibited-none": "",
+          "dnd-inhibited-notification": "<span foreground='red'><sup></sup></span>",
+          "dnd-inhibited-none": ""
+        },
+        "return-type": "json",
+        "exec-if": "which swaync-client",
+        "exec": "swaync-client -swb",
+        "on-click": "swaync-client -t -sw",
+        "escape": true
+      },
+}
