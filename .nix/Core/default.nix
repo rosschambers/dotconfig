@@ -7,6 +7,7 @@
     ./Hardware
     ./Networking
     ./Programs
+    ./Security
     ./System
   ];
 }
