@@ -57,7 +57,8 @@
                             "items": [
                                 {
                                     "id": "workbench.action.reopenClosedEditor",
-                                    "label": "&&Reopen Closed Editor"
+                                    "label": "&&Reopen Closed Editor",
+                                    "enabled": false
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
@@ -74,29 +75,18 @@
                                     "label": "/home/ixiri"
                                 },
                                 {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "external": "file:///home/ixiri/.nix",
-                                        "path": "/home/ixiri/.nix",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "~/.nix"
-                                },
-                                {
                                     "id": "vscode.menubar.separator"
                                 },
                                 {
                                     "id": "openRecentFile",
                                     "uri": {
                                         "$mid": 1,
-                                        "external": "file:///home/ixiri/.nix/packages.nix",
-                                        "path": "/home/ixiri/.nix/packages.nix",
+                                        "external": "file:///etc/sddm.conf",
+                                        "path": "/etc/sddm.conf",
                                         "scheme": "file"
                                     },
                                     "enabled": true,
-                                    "label": "~/.nix/packages.nix"
+                                    "label": "/etc/sddm.conf"
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
@@ -177,7 +167,8 @@
                     },
                     {
                         "id": "workbench.action.toggleAutoSave",
-                        "label": "A&&uto Save"
+                        "label": "A&&uto Save",
+                        "checked": true
                     },
                     {
                         "id": "submenuitem.MenubarPreferencesMenu",
@@ -502,10 +493,6 @@
                                     "id": "workbench.action.togglePanel",
                                     "label": "&&Panel",
                                     "checked": true
-                                },
-                                {
-                                    "id": "toggle.toggleCustomTitleBar",
-                                    "label": "Custom Title Bar"
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
@@ -1724,15 +1711,6 @@
             "sideBarBackground": "#181818",
             "statusBarBackground": "#181818",
             "statusBarNoFolderBackground": "#1f1f1f"
-        },
-        "layoutInfo": {
-            "sideBarSide": "left",
-            "editorPartMinWidth": 220,
-            "titleBarHeight": 0,
-            "activityBarWidth": 48,
-            "sideBarWidth": 425,
-            "statusBarHeight": 22,
-            "windowBorder": false
         }
     },
     "windowsState": {
@@ -1741,9 +1719,9 @@
             "backupPath": "/home/ixiri/.config/VSCodium/Backups/a60f88c4f3108deac4a3ebbd1bd69f61",
             "uiState": {
                 "mode": 0,
-                "x": 568,
-                "y": 484,
-                "width": 1024,
+                "x": 0,
+                "y": 0,
+                "width": 1080,
                 "height": 720
             }
         },
