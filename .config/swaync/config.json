@@ -64,7 +64,7 @@
     "backlight": {
       "label": "",
       "device": "intel_backlight",
-      "min": 10
+      "min": 5
     },
     "volume": {
       "label": ""

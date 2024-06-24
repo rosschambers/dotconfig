@@ -11,13 +11,15 @@
     fftw
   ];
 
-    imports =
-    [
-      ./Browser
-      ./Editor
-      ./Launcher
-      ./Notifications
-      ./StatusBar
-      ./Terminal
-    ];
+  imports =
+  [
+    ./Browser
+    ./Development
+    ./Editor
+    ./FileExplorer
+    ./Launcher
+    ./Notifications
+    ./StatusBar
+    ./Terminal
+  ];
 }

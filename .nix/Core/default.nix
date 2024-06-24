@@ -4,10 +4,13 @@
     ./Audio
     ./Bootloader
     ./Display
+    ./Greeter
     ./Hardware
     ./Networking
     ./Programs
     ./Security
+    ./Services
     ./System
+    ./Users
   ];
 }

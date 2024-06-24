@@ -81,7 +81,7 @@ button:hover {
     color: @warn;
 }
 
-#battery.error{
+#battery.critical{
     color: @error;
 }
 
