@@ -6,4 +6,10 @@
   hardware.enableRedistributableFirmware = true;
   hardware.opengl.extraPackages = with pkgs; [   
   ];
+
+  hardware.bluetooth = {
+    enable = true;
+    powerOnBoot = true;
+    settings.General.Experimental = true;
+  };
 }

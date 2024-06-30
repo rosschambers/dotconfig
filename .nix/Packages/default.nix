@@ -9,6 +9,7 @@
     git
     iniparser
     fftw
+    wl-clip-persist
   ];
 
   imports =
@@ -17,7 +18,9 @@
     ./Development
     ./Editor
     ./FileExplorer
+    ./Games
     ./Launcher
+    ./Notes
     ./Notifications
     ./StatusBar
     ./Terminal

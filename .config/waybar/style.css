@@ -37,6 +37,13 @@ tooltip {
     font-size: 12px;
 }
 
+/* limited context menu styling */
+menu {
+    font-size: 10px;
+    background: darkslateblue;
+    border-radius: 10px;
+}
+
 button:hover {
     box-shadow: none;
     text-shadow: none;
