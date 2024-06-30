@@ -1,3 +1,4 @@
+1. After a fresh noxos install
 1. Install Git: 
     
     `nix-shell -p git`
