@@ -15,6 +15,7 @@
   environment.systemPackages = with pkgs; [
     wget
     git
+    flatpak
   ];
 
   time.timeZone = "America/Detroit";
