@@ -19,7 +19,5 @@
     hyprpaper
     brightnessctl
     wlsunset
-
-    powertop
   ];
 }

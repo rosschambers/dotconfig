@@ -7,6 +7,12 @@
   hardware.opengl.extraPackages = with pkgs; [   
   ];
 
+  environment.systemPackages = with pkgs; [
+    powertop
+  ];
+
+  powerManagement.powertop.enable = true;
+
   hardware.bluetooth = {
     enable = true;
     powerOnBoot = true;
