@@ -7,34 +7,8 @@
 {
   nix.settings.experimental-features = [ "nix-command" ];
   imports =
-    [ # Include the results of the hardware scan.
-      #./hardware-configuration.nix
+    [
       ./Packages
       ./Core
     ];
-
-  # services.greetd = {
-  #   enable = true;
-  #   # settings = rec {
-  #   #   default_session = {
-  #   #     command = "hyprland";
-  #   #     user = "ixiri";
-  #   #   };
-  #   # };
-  # };
-
-  # programs.regreet = {
-  #   enable = true;
-  #   };
-
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.ixiri = {
-    isNormalUser = true;
-    description = "ixiri";
-    extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [
-    #  thunderbird
-    ];
-  };
-
 }

@@ -1,9 +1,29 @@
 .bash_history
+.bash_profile
+.bashrc
 
 .config/VSCodium/
+.config/GitHub Desktop/
+.config/environment.d/
+.config/git/
+.config/pulse/
+.config/systemd/
+.config/unity3d/
+.gnupg/
+.gtkrc-2.0
+.nix-defexpr/
+.nix-profile
+.pki/
+.steam/
+.steampath
+.steampid
 .cache/
 .local/
 .mozilla/
 .ssh/
+.var/
+.profile
+
+.gitconfig
 Downloads/
 tmp

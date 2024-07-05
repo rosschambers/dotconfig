@@ -1,32 +1,60 @@
-{ pkgs, ... }: 
+{ config, pkgs, ... }:
+let
+  home-manager = builtins.fetchTarball "https://github.com/nix-community/home-manager/archive/master.tar.gz";
+in
 {
-
   programs.dconf.enable = true;
-  
-  environment.systemPackages =  with pkgs; [
-    home-manager
+  imports = [
+    (import "${home-manager}/nixos")
   ];
 
-  # home-manager.users.ixiri = {
-  #   /* The home.stateVersion option does not have a default and must be set */
-  #   home.stateVersion = "18.09";
-  #   programs.git = {
-  #     enable = true;
-  #     userName  = "ixiri";
-  #     userEmail = "ross.a.chambers@gmail.com";
-  #   };
-  #   programs.dconf.enable = true;
+  users.users.ixiri = {
+    isNormalUser = true;
+    description = "ixiri";
+    extraGroups = [ "networkmanager" "wheel" ];
+  };
 
-  #   programs.zsh = {
-  #     enable = true;
-  #     enableCompletion = true;
-  #     autosuggestion.enable = true;
-  #     syntaxHighlighting.enable = true;
+  home-manager.users.ixiri = {
 
-  #     shellAliases = {
-  #       ll = "ls -la";
-  #       update = "sudo nixos-rebuild switch";
-  #     };
-  #   };
-  # };
+    services.blueman-applet.enable = true;
+    services.network-manager-applet.enable = true;
+
+    gtk = {
+      enable = true;
+      theme = {
+        package = pkgs.rose-pine-gtk-theme;
+        name = "rose-pine";
+      };
+      iconTheme.name = "Papirus-Dark";
+      iconTheme.package = pkgs.papirus-icon-theme;
+
+      font.name="FiraCode";
+    };
+
+    programs.bash = {
+      enable = true;
+    };
+
+    programs.readline.extraConfig = "
+      set show-all-if-ambiguous on
+      set menu-complete-display-prefix on
+      TAB: menu-complete
+      set colored-completion-prefix on
+      set colored-stats on
+    ";
+
+    programs.oh-my-posh = {
+      enable = true;
+      useTheme = "jandedobbeleer";
+    };
+
+    programs.git = {
+      enable = true;
+      userName  = "Ross Chambers";
+      userEmail = "ross.a.chambers@gmail.com";
+    };
+    /* The home.stateVersion option does not have a default and must be set */
+    home.stateVersion = "18.09";
+    /* Here goes the rest of your home-manager config, e.g. home.packages = [ pkgs.foo ]; */
+  };
 }

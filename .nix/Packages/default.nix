@@ -10,6 +10,7 @@
     iniparser
     fftw
     wl-clip-persist
+    neofetch
   ];
 
   imports =

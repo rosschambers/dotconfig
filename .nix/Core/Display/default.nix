@@ -18,5 +18,8 @@
   environment.systemPackages =  with pkgs; [
     hyprpaper
     brightnessctl
+    wlsunset
+
+    powertop
   ];
 }

@@ -99,7 +99,7 @@
           },
           {
             "label": "󰾅",
-            "command": "powerprofilesctl set balanced"
+            "command": " set balanced"
           },
           {
             "label": "󰓅",
