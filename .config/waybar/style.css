@@ -72,6 +72,15 @@ button:hover {
     border-radius: 15px;
 }
 
+#custom-powermode{
+    padding: 0px 10px;
+}
+#custom-powermode:hover{
+    background: linear-gradient(-45deg, @item-background-hover 70%, transparent 90%);
+    border-radius: 15px;
+}
+
+
 #custom-notification {
     padding-right: 10px;
 }

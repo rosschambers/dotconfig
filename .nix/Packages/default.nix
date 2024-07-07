@@ -11,6 +11,8 @@
     fftw
     wl-clip-persist
     neofetch
+    uxplay
+    stacer
   ];
 
   imports =

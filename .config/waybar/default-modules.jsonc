@@ -91,6 +91,12 @@
         "on-click": "~/.scripts/wofi-power.sh",
         "on-click-right": "killall wofi"
     },
+    "custom/powermode":{
+        "format": "",
+        "tooltip-format": "",
+        "on-click": "~/.scripts/power-mode.sh",
+        "on-click-right": "killall wofi"
+    },
     "network":
     {
         "format-wifi": "",

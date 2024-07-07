@@ -4,9 +4,15 @@
 
 .config/VSCodium/
 .config/GitHub Desktop/
+.config/dconf/
+.config/fish/
+.config/Electron/
+.config/gtk*/
+.config/warp-terminal/
 .config/environment.d/
 .config/git/
 .config/pulse/
+.config/sunshine
 .config/systemd/
 .config/unity3d/
 .gnupg/

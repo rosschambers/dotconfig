@@ -12,7 +12,7 @@
       pkgs.xdg-desktop-portal-hyprland
     ];
   };
-
+  xdg.portal.config.common.default = [ "gtk" "hyprland" ];
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
   environment.systemPackages =  with pkgs; [

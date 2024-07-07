@@ -18,6 +18,7 @@
         "modules-right":[
             "group/hardware",
             "tray",
+            "custom/powermode",
             "custom/power"
         ]
     }

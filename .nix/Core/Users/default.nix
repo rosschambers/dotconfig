@@ -1,6 +1,6 @@
 { config, pkgs, ... }:
 let
-  home-manager = builtins.fetchTarball "https://github.com/nix-community/home-manager/archive/master.tar.gz";
+  home-manager = builtins.fetchTarball "https://github.com/nix-community/home-manager/archive/release-24.05.tar.gz";
 in
 {
   programs.dconf.enable = true;
@@ -11,6 +11,7 @@ in
   users.users.ixiri = {
     isNormalUser = true;
     description = "ixiri";
+    shell = pkgs.fish;
     extraGroups = [ "networkmanager" "wheel" ];
   };
 
