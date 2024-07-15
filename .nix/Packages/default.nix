@@ -13,6 +13,7 @@
     neofetch
     uxplay
     stacer
+    wvkbd
   ];
 
   imports =

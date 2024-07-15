@@ -1,4 +1,4 @@
-1. After a fresh noxos install
+1. After a fresh nixos install
 1. Install Git: 
     
     `nix-shell -p git`
@@ -31,4 +31,4 @@
     `sudo nixos-rebuild boot`
 1. Reboot
 
-    `systemctl reboot`
+    `reboot`

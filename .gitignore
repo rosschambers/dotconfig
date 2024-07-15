@@ -3,7 +3,14 @@
 .bashrc
 
 .config/VSCodium/
-.config/GitHub Desktop/
+.config/GitHub Desktop
+.config/Cache/
+.config/stacer/
+.dendron*
+.mume*
+.vscode-oss/extensions/
+.config/obsidian/
+.config/micro/
 .config/dconf/
 .config/fish/
 .config/Electron/
@@ -32,4 +39,6 @@
 
 .gitconfig
 Downloads/
+Documents/
+Dendron/
 tmp

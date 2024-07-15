@@ -4,5 +4,6 @@
     warp-terminal
     kitty
     oh-my-posh
+    aichat
   ];
 }

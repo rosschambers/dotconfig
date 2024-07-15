@@ -11,7 +11,6 @@
       udisks2.enable = true;
       blueman.enable = true;
       yubikey-agent.enable = true;
-      tlp.enable = true;
   };
 
   # Enable the OpenSSH daemon.

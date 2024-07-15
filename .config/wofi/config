@@ -15,5 +15,5 @@ insensitive=true
 allow_images=true
 image_size=28
 gtk_dark=false
-term=ptyxis
+term=kitty
 gtk_dark=true

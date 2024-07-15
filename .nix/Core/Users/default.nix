@@ -11,7 +11,7 @@ in
   users.users.ixiri = {
     isNormalUser = true;
     description = "ixiri";
-    shell = pkgs.fish;
+    shell = pkgs.bash;
     extraGroups = [ "networkmanager" "wheel" ];
   };
 
