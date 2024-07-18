@@ -16,6 +16,7 @@ in
   };
 
   home-manager.users.ixiri = {
+    home.enableNixpkgsReleaseCheck = false;
 
     services.blueman-applet.enable = true;
     services.network-manager-applet.enable = true;
