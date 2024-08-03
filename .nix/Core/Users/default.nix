@@ -18,6 +18,243 @@ in
   home-manager.users.ixiri = {
     home.enableNixpkgsReleaseCheck = false;
 
+    wayland.windowManager.hyprland.enable = true;
+    wayland.windowManager.hyprland.extraConfig =
+    ''
+$terminal = kitty
+$fileManager = thunar
+$launcher = ~/.scripts/start-launcher.sh
+$browser = firefox
+$textEditor = codium
+$music = flatpak run com.spotify.Client
+
+exec-once=wlsunset -t 3500 -l 42.2 -L -83
+exec-once=hyprpaper
+exec-once=waybar
+exec-once=swaync
+exec-once=nm-applet
+exec-once=sunshine
+exec-once=[workspace 1 silent] $textEditor
+exec-once=[workspace 2 silent] $browser
+exec-once=[workspace 3 silent] $terminal
+exec-once=ssh-add ~/.ssh/id.ssh
+# exec-once=[workspace 4 silent ] $music
+
+
+# See https://wiki.hyprland.org/Configuring/Monitors/'
+monitor=,preferred,auto,auto
+# monitor=HDMI-A-2,1400x900@30 -vsync,0x0,1
+
+windowrulev2=opacity 0.75,initialclass:dev.warp.Warp
+windowrulev2=opacity 0.75,title:(.*)(- VSCodium)$
+windowrulev2=opacity 0.75,initialclass:thunar
+
+# See https://wiki.hyprland.org/Configuring/Keywords/ for more
+
+# Execute your favorite apps at launch
+# exec-once = waybar & hyprpaper & firefox
+
+# Source a file (multi-file configs)
+# source = ~/.config/hypr/myColors.conf
+
+
+# Some default env vars.
+env = XCURSOR_SIZE,24
+env = QT_QPA_PLATFORMTHEME,qt5ct # change to qt6ct if you have that
+
+# For all categories, see https://wiki.hyprland.org/Configuring/Variables/
+input {
+    numlock_by_default = true
+    kb_layout = us
+    kb_variant =
+    kb_model =
+    kb_options =
+    kb_rules =
+
+    follow_mouse = 1
+
+    touchpad {
+        natural_scroll = no
+    }
+
+    sensitivity = 0 # -1.0 to 1.0, 0 means no modification.
+}
+
+general {
+    # See https://wiki.hyprland.org/Configuring/Variables/ for more
+
+    gaps_in = 5
+    gaps_out = 10
+    border_size = 2
+    col.active_border = rgba(6B3D90FF) rgba(C8102EFF) 45deg
+    col.inactive_border = rgba(59595966)
+    resize_on_border = true
+
+    layout = dwindle
+
+    # Please see https://wiki.hyprland.org/Configuring/Tearing/ before you turn this on
+    allow_tearing = false
+}
+
+decoration {
+    # See https://wiki.hyprland.org/Configuring/Variables/ for more
+
+    rounding = 8
+    
+    blur {
+        enabled = false
+    }
+
+    drop_shadow = false
+}
+
+animations {
+    enabled = yes
+
+    # Some default animations, see https://wiki.hyprland.org/Configuring/Animations/ for more
+
+    bezier = myBezier, 0.05, 0.9, 0.1, 1.05
+
+    bezier = border, -0.5, 0.5, 0.5, 0.5
+
+    animation = windows, 1, 5, myBezier, popin
+    animation = border, 1, 2, default
+    animation = borderangle, 1, 60, border, loop
+    animation = fade, 0
+    animation = workspaces, 1, 6, default, fade
+}
+
+dwindle {
+    # See https://wiki.hyprland.org/Configuring/Dwindle-Layout/ for more
+    pseudotile = false # master switch for pseudotiling. Enabling is bound to mainMod + P in the keybinds section below
+    preserve_split = true # you probably want this
+
+    special_scale_factor = 1
+    no_gaps_when_only = 1
+    use_active_for_splits = false
+}
+
+master {
+    # See https://wiki.hyprland.org/Configuring/Master-Layout/ for more
+    no_gaps_when_only = 1
+}
+
+gestures {
+    # See https://wiki.hyprland.org/Configuring/Variables/ for more
+    workspace_swipe = off
+}
+
+misc {
+    # See https://wiki.hyprland.org/Configuring/Variables/ for more
+    force_default_wallpaper = 0 # Set to 0 or 1 to disable the anime mascot wallpapers
+    focus_on_activate = true
+    mouse_move_enables_dpms = true
+    key_press_enables_dpms = true
+    close_special_on_empty = false
+    initial_workspace_tracking = 2
+}
+
+debug {
+    disable_logs = false
+    enable_stdout_logs = true
+}
+
+# Example per-device config
+# See https://wiki.hyprland.org/Configuring/Keywords/#executing for more
+# device {
+#     name = epic-mouse-v1
+#     sensitivity = -0.5
+# }
+
+# Example windowrule v1
+# windowrule = float, ^(kitty)$
+# Example windowrule v2
+# windowrulev2 = float,class:^(kitty)$,title:^(kitty)$
+# See https://wiki.hyprland.org/Configuring/Window-Rules/ for more
+windowrulev2 = suppressevent maximize, class:.* # You'll probably like this.
+
+
+# See https://wiki.hyprland.org/Configuring/Keywords/ for more
+$mainMod = SUPER
+
+# Example binds, see https://wiki.hyprland.org/Configuring/Binds/ for more
+bind = $mainMod, Q, exec, $terminal
+bind = $mainMod, period, exec, $terminal
+bind = $mainMod, C, killactive, 
+bind = $mainMod, M, exit, 
+bind = $mainMod, E, exec, $fileManager
+bind = $mainMod, V, togglefloating, 
+bind = $mainMod, B, exec, $browser
+bind = $mainMod, R, exec, $launcher
+
+bind = $mainMod, tab, hyprexpo:expo, toggle
+bind = $mainMod, P, pseudo, # dwindle
+bind = $mainMod, J, togglesplit, # dwindle
+bind = $mainMod, F, fullscreen
+
+# Move focus with mainMod + arrow keys
+bind = $mainMod, left, movefocus, l
+bind = $mainMod, right, movefocus, r
+bind = $mainMod, up, movefocus, u
+bind = $mainMod, down, movefocus, d
+
+# brightness
+bind = , xf86monbrightnessup, exec, brightnessctl set 10%+
+bind = , xf86monbrightnessdown, exec, brightnessctl set 10%-
+
+bindl  = , XF86AudioMute, exec, ~/.scripts/volumecontrol.sh -o m # toggle audio mute
+bindl  = , XF86AudioMicMute, exec, ~/.scripts/volumecontrol.sh -i m # toggle microphone mute
+bindel = , XF86AudioLowerVolume, exec, ~/.scripts/volumecontrol.sh -o d # decrease volume
+bindel = , XF86AudioRaiseVolume, exec, ~/.scripts/volumecontrol.sh -o i # increase volume
+bindl  = , XF86AudioPlay, exec, playerctl play-pause
+bindl  = , XF86AudioPause, exec, playerctl play-pause
+bindl  = , XF86AudioNext, exec, playerctl next
+bindl  = , XF86AudioPrev, exec, playerctl previous
+
+
+# Switch workspaces with mainMod + [0-9]
+bind = $mainMod, 1, workspace, 1
+bind = $mainMod, 2, workspace, 2
+bind = $mainMod, 3, workspace, 3
+bind = $mainMod, 4, workspace, 4
+bind = $mainMod, 5, workspace, 5
+bind = $mainMod, 6, workspace, 6
+bind = $mainMod, 7, workspace, 7
+bind = $mainMod, 8, workspace, 8
+bind = $mainMod, 9, workspace, 9
+bind = $mainMod, 0, workspace, 10
+
+# bind = $mainMod, left
+
+# Move active window to a workspace with mainMod + SHIFT + [0-9]
+bind = $mainMod SHIFT, 1, movetoworkspace, 1
+bind = $mainMod SHIFT, 2, movetoworkspace, 2
+bind = $mainMod SHIFT, 3, movetoworkspace, 3
+bind = $mainMod SHIFT, 4, movetoworkspace, 4
+bind = $mainMod SHIFT, 5, movetoworkspace, 5
+bind = $mainMod SHIFT, 6, movetoworkspace, 6
+bind = $mainMod SHIFT, 7, movetoworkspace, 7
+bind = $mainMod SHIFT, 8, movetoworkspace, 8
+bind = $mainMod SHIFT, 9, movetoworkspace, 9
+bind = $mainMod SHIFT, 0, movetoworkspace, 10
+
+# Example special workspace (scratchpad)
+bind = $mainMod, S, togglespecialworkspace, magic
+bind = $mainMod SHIFT, S, movetoworkspace, special:magic
+
+# Scroll through existing workspaces with mainMod + scroll
+bind = $mainMod, mouse_down, workspace, e+1
+bind = $mainMod, mouse_up, workspace, e-1
+
+# Move/resize windows with mainMod + LMB/RMB and dragging
+bindm = $mainMod, mouse:272, movewindow
+bindm = $mainMod, mouse:273, resizewindow
+
+'';
+    wayland.windowManager.hyprland.plugins = [
+    pkgs.hyprlandPlugins.hyprexpo
+  ];
+
     services.blueman-applet.enable = true;
     services.network-manager-applet.enable = true;
 

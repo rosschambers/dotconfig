@@ -5,5 +5,6 @@
     kitty
     oh-my-posh
     aichat
+    wl-clipboard
   ];
 }
